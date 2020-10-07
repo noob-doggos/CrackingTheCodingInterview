@@ -60,20 +60,18 @@ public class CTCI_1_Braces
         return charStack.isEmpty();
     }
 
-    public static String[][] braces(String[][] values)
+    public static String[] braces(String[] values)
     {
-        if (values.length == 0 || values[0].length == 0)
+        if (values.length == 0)
         {
             return null;
         }
-        String[][] result = new String[values.length][values[0].length];
+        
+        String[] result = new String[values.length];
 
         for (int i = 0; i < values.length; i++)
         {
-            for (int j = 0; j < values[0].length; j++)
-            {
-                result[i][j] = isValid(values[i][j]) ? "YES" : "NO";
-            }
+            result[i] = isValid(values[i]) ? "YES" : "NO";
         }
 
         return result;
@@ -85,10 +83,10 @@ public class CTCI_1_Braces
         System.out.println(a);
         boolean b = isValid("[[({})]]");
         System.out.println(b);
-        String[][] toCheck = new String[2][1];
-        toCheck[0][0] = "[[(]])";
-        toCheck[1][0] = "[[({})]]";
-        System.out.println(Arrays.deepToString(braces(toCheck)));
+        String[] toCheck = new String[2];
+        toCheck[0] = "[[(]])";
+        toCheck[1] = "[[({})]]";
+        System.out.println(Arrays.toString(braces(toCheck)));
         
     }
 }
