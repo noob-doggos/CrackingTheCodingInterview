@@ -1,6 +1,7 @@
 
 public class CTCI_2_WordSearch
 {
+<<<<<<< HEAD
     /**
      * A method to check whether a given word can be constructed from
      * sequentially adjacent cells in the 2-dimensional char array, board.
@@ -12,6 +13,8 @@ public class CTCI_2_WordSearch
      * @return whether word can be constructed from sequentially adjacent cells
      *         in the given 2D char array.
      */
+=======
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
     public boolean exist(char[][] board, String word)
     {
         for (int i = 0; i < board.length; i++)
@@ -26,6 +29,7 @@ public class CTCI_2_WordSearch
         }
         return false;
     }
+<<<<<<< HEAD
 
     /**
      * A helper method to make a deep copy of a 2D boolean array.
@@ -34,6 +38,9 @@ public class CTCI_2_WordSearch
      *            the 2D boolean array to makea copy of.
      * @return a deep copy of the given 2D boolean array.
      */
+=======
+    
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
     public boolean[][] copyArr2D(boolean[][] input)
     {
         boolean[][] toReturn = new boolean[input.length][input[0].length];
@@ -47,6 +54,7 @@ public class CTCI_2_WordSearch
         return toReturn;
     }
 
+<<<<<<< HEAD
     /**
      * A helper method for the exist method to return whether a given word can
      * be constructed from sequentially adjacent cells in the 2-dimensional char
@@ -89,45 +97,71 @@ public class CTCI_2_WordSearch
     {
         // if the index of the word we are constructing from the array elements
         // is the same as the target string length, return true.
+=======
+    public boolean explore(char[][] board, boolean[][] explored, int row, int col, int idx, String target)
+    {
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (idx >= target.length())
         {
             return true;
         }
+<<<<<<< HEAD
 
         // return false if we are out of array bounds.
+=======
+        
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (row < 0 || row >= board.length || col < 0 || col >= board[0].length)
         {
             return false;
         }
 
+<<<<<<< HEAD
         // if we've already explored this array element, return false.
         // otherwise, mark this element as explored and explore adjacent
         // elements.
+=======
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (explored[row][col])
         {
             return false;
         }
 
         explored[row][col] = true;
+<<<<<<< HEAD
 
         // if the current element in the char array does not match the next
         // character of the target string we want to build, return false.
+=======
+        
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (board[row][col] != target.charAt(idx))
         {
             return false;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         boolean[][] southExp = copyArr2D(explored);
         boolean[][] northExp = copyArr2D(explored);
         boolean[][] westExp = copyArr2D(explored);
         boolean[][] eastExp = copyArr2D(explored);
 
+<<<<<<< HEAD
         // explore south, east, north, and west elements recursively.
+=======
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (explore(board, southExp, row + 1, col, idx + 1, target))
         {
             return true;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         if (explore(board, eastExp, row, col + 1, idx + 1, target))
         {
             return true;
@@ -143,15 +177,24 @@ public class CTCI_2_WordSearch
             return true;
         }
 
+<<<<<<< HEAD
         // if none of the adjacent paths construct the target word, return
         // false.
+=======
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
         return false;
     }
 
     public static void main(String[] args)
     {
+<<<<<<< HEAD
         // char[][] board = new char[][] {{'a'}};
         char[][] board = new char[][] { { 'a', 'b', 'c', 'e' }, { 's', 'f', 'c', 's' }, { 'a', 'd', 'e', 'e' } };
         System.out.println(new CTCI_2_WordSearch().exist(board, "abcced"));
+=======
+        char[][] board = new char[][] {{'a'}};
+        //char[][] board = new char[][] { { 'a', 'b', 'c', 'e' }, { 's', 'f', 'c', 's' }, { 'a', 'd', 'e', 'e' } };
+        System.out.println(new CTCI_2_WordSearch().exist(board, "a"));
+>>>>>>> bcf45a097637d48385889974f719cfbb2eb88054
     }
 }
