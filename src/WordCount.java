@@ -21,7 +21,7 @@ public class WordCount
     
     public static void printEntry(String key, Integer val)
     {
-        if (val > OCCURRENCES) System.out.printf("%s occurs %d times.\n", key, val);
+        if (val >= OCCURRENCES) System.out.printf("%s occurs %d times.\n", key, val);
     }
 
     // Reads book text and returns a map from words to counts.
