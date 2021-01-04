@@ -4,6 +4,16 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+/**
+ * WordCount.java
+ * Group members: Victor, Eric, Clyde
+ *
+ * Reflection:
+ * - what we learned from doing this project: we learned how to use the Map interface and the TreeMap implementation.
+ * - something that didn't work out individually and how I solved it: n/a
+ * - something that didn't work out as a group and how we solved it: some of us needed a refresher on Scanner so we Googled the JavaDoc for it
+ * 
+ */
 public class WordCount
 {
     // minimum number of occurrences needed to be printed - 2000;
@@ -12,7 +22,7 @@ public class WordCount
     public static void main(String[] args) throws FileNotFoundException
     {
         System.out.println("This program displays the most frequently occurring words from the book Moby-Dick:");
-        Scanner in = new Scanner(new File("mobydick.txt")); // specify file encoding because otherwise Java will assume CP-1252, when the file is UTF8.
+        Scanner in = new Scanner(new File("mobydick.txt"));
         Map<String, Integer> countMap = getCountMap(in);
         countMap.forEach((k, v) -> printEntry(k, v));
     }
