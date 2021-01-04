@@ -11,7 +11,7 @@ public class WordCount
 
     public static void main(String[] args) throws FileNotFoundException
     {
-        System.out.println("This program displays the most frequently occurring words from the book Moby Dick.");
+        System.out.println("This program displays the most frequently occurring words from the book Moby-Dick:");
         // read the book into a map
         // to do
         Scanner in = new Scanner(new File("mobydick.txt"), "utf-8"); // specify file encoding because otherwise Java will assume CP-1252, when the file is UTF8.
