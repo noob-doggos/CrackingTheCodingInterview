@@ -12,9 +12,7 @@ public class WordCount
     public static void main(String[] args) throws FileNotFoundException
     {
         System.out.println("This program displays the most frequently occurring words from the book Moby-Dick:");
-        // read the book into a map
-        // to do
-        Scanner in = new Scanner(new File("mobydick.txt"), "utf-8"); // specify file encoding because otherwise Java will assume CP-1252, when the file is UTF8.
+        Scanner in = new Scanner(new File("mobydick.txt")); // specify file encoding because otherwise Java will assume CP-1252, when the file is UTF8.
         Map<String, Integer> countMap = getCountMap(in);
         countMap.forEach((k, v) -> printEntry(k, v));
     }
@@ -27,8 +25,8 @@ public class WordCount
     // Reads book text and returns a map from words to counts.
     public static Map<String, Integer> getCountMap(Scanner in)
     {
-        // to do
         Map<String, Integer> wordCountMap = new TreeMap<>();
+        
         while (in.hasNext())
         {
             String cur = in.next().toLowerCase();
