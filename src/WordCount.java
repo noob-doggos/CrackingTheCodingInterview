@@ -7,6 +7,11 @@ import java.util.TreeMap;
 /**
  * WordCount.java
  * Group members: Victor, Eric, Clyde
+ * 
+ * Contributions:
+ * - Victor: integrating map, treemap and scanner to create code
+ * - Eric: research on TreeMap, Map, Scanner
+ * - Clyde: research on TreeMap, Map, Scanner
  *
  * Reflection:
  * - what we learned from doing this project: we learned how to use the Map interface and the TreeMap implementation.
